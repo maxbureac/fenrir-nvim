@@ -1,0 +1,2 @@
+# Fenrir neovim configuration
+
