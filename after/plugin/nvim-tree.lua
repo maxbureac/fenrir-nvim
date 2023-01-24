@@ -19,12 +19,54 @@ require("nvim-tree").setup({
   respect_buf_cwd = true,
   update_focused_file = {
       enable = true,
-      update_root = true
+      update_root = false
   },
   renderer = {
+    icons = {
+      webdev_colors = true,
+      git_placement = "before",
+      modified_placement = "after",
+      padding = " ",
+      symlink_arrow = " ➛ ",
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = true,
+        git = true,
+        modified = true,
+      },
+      glyphs = {
+        default = "",
+        symlink = "",
+        bookmark = "",
+        modified = "●",
+        folder = {
+          arrow_closed = "",
+          arrow_open = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        },
+        git = {
+          unstaged = "✗",
+          staged = "✓",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+          deleted = "",
+          ignored = "◌",
+        },
+      },
+    },
+    special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
+    symlink_destination = true,
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
+    git_ignored = false,
   },
 })
