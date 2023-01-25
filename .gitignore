@@ -4,4 +4,5 @@ external
 packer_compiled.lua
 thirdparty
 spell
+.java-workspace
 .luarc.json

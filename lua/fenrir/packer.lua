@@ -7,7 +7,6 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'nvim-tree/nvim-web-devicons'
-    use 'glepnir/dashboard-nvim'
     use 'tpope/vim-sleuth'
     use 'onsails/lspkind.nvim'
     use 'nvim-tree/nvim-tree.lua'
@@ -32,9 +31,9 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/nvim-treesitter-context')
     use('nvim-treesitter/playground')
     use('p00f/nvim-ts-rainbow')
@@ -55,14 +54,14 @@ return require('packer').startup(function(use)
 
     })
     -- Lua snippets and stuff
-    use({'L3MON4D3/LuaSnip', tag = 'v<CurrentMajor>.*'})
+    use({ 'L3MON4D3/LuaSnip', tag = 'v<CurrentMajor>.*' })
     use('rafamadriz/friendly-snippets')
     use('hrsh7th/cmp-nvim-lsp')
     use('hrsh7th/cmp-buffer')
     use('hrsh7th/cmp-path')
     use('hrsh7th/cmp-cmdline')
     use('hrsh7th/nvim-cmp')
-    use ('saadparwaiz1/cmp_luasnip')
+    use('saadparwaiz1/cmp_luasnip')
 
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -70,36 +69,26 @@ return require('packer').startup(function(use)
         'VonHeikemen/lsp-zero.nvim',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            { 'neovim/nvim-lspconfig' }, -- Required
+            { 'williamboman/mason.nvim' }, -- Optional
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},         -- Required
-            {'hrsh7th/cmp-nvim-lsp'},     -- Required
-            {'hrsh7th/cmp-buffer'},       -- Optional
-            {'hrsh7th/cmp-path'},         -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'},     -- Optional
+            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'hrsh7th/cmp-buffer' }, -- Optional
+            { 'hrsh7th/cmp-path' }, -- Optional
+            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+            { 'hrsh7th/cmp-nvim-lua' }, -- Optional
 
             -- Snippets
-            {'L3MON4D3/LuaSnip'},             -- Required
-            {'rafamadriz/friendly-snippets'}, -- Optional
+            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
-    use {
-        "ahmedkhalf/project.nvim",
-        config = function()
-            require("project_nvim").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
     }
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
@@ -113,6 +102,9 @@ return require('packer').startup(function(use)
     use('tpope/vim-dadbod')
     use('kristijanhusak/vim-dadbod-ui')
     use('kristijanhusak/vim-dadbod-completion')
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use 'mfussenegger/nvim-dap'
+    use 'rcarriga/nvim-dap-ui'
+    use 'mfussenegger/nvim-jdtls'
+    use 'theHamsta/nvim-dap-virtual-text'
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 end)
