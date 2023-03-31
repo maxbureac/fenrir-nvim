@@ -29,6 +29,7 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'GENERAL: Go to lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'GENERAL: Go to upper window' })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'GENERAL: Go to right window' })
 
+vim.keymap.set('n', '<leader>ts', '<cmd>SymbolsOutline<CR>', { desc = 'Symbols: toggle symbols window' })
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 

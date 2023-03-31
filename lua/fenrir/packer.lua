@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
     use 'onsails/lspkind.nvim'
     use 'nvim-tree/nvim-tree.lua'
     use 'jghauser/mkdir.nvim'
+    use 'simrat39/symbols-outline.nvim'
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end

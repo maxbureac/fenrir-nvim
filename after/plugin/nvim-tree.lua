@@ -3,6 +3,8 @@
 -- disable netrw at the very start of your init.lua (strongly advised)
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
+vim.keymap.set("n", "<leader>nn", "<cmd>NvimTreeToggle<cr>", { desc = "NvimTree: Open file browser" })
+vim.keymap.set("n", "<leader>nf", "<cmd>NvimTreeFindFile<cr>", { desc = "NvimTree: Find in file browser" })
 
 -- OR setup with some options
 require("nvim-tree").setup({
@@ -18,8 +20,8 @@ require("nvim-tree").setup({
   sync_root_with_cwd = true,
   respect_buf_cwd = true,
   update_focused_file = {
-      enable = true,
-      update_root = false
+    enable = true,
+    update_root = false
   },
   renderer = {
     icons = {
@@ -67,6 +69,5 @@ require("nvim-tree").setup({
   },
   filters = {
     dotfiles = false,
-    git_ignored = false,
   },
 })

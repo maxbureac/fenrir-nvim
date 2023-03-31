@@ -48,6 +48,7 @@ vim.keymap.set('n', '<leader>dbe', function() dap.repl.eval() end, { desc = 'DEB
 vim.keymap.set('v', '<leader>dbe', function() dap.repl.eval() end, { desc = 'DEBUG: evaluate selected' })
 
 vim.api.nvim_create_user_command('RunDebugger', function() dap.run() end, {})
+require('dap.ext.vscode').load_launchjs()
 -- nnoremap('gD', vim.lsp.buf.declaration, bufopts, "Go to declaration")
 -- nnoremap('gd', vim.lsp.buf.definition, bufopts, "Go to definition")
 -- nnoremap('gi', vim.lsp.buf.implementation, bufopts, "Go to implementation")
